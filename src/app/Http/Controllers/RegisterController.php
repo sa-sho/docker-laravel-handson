@@ -24,7 +24,7 @@ class RegisterController extends Controller
              'name' => 'required|string|max:255',
             // テストのため、コメントアウト
              'email' => 'required|string|email|max:255|unique:users',
-             'email' => 'required',
+             //'email' => 'required',
              'password' => 'required|string|confirmed|min:8',
          ]);
         //  dd('stop');
