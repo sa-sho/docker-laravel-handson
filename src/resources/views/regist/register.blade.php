@@ -9,7 +9,7 @@
     {{ csrf_field() }}
     <dl>
         <dt>名前:</dt>
-        <dd><input type="text" name="email" size="30">
+        <dd><input type="text" name="name" size="30">
             <span>{{ $errors->first('name') }}</span></dd>
     </dl>
     <dl>
