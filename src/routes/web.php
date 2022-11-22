@@ -20,6 +20,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\PostsController::class, 'index'])
 ->middleware('guest')
 ->name('top');
+Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
+    'create', 'store'
+    ]]);
+
+Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
+    'create', 'store', 'show'
+    ]]);
 
 Route::get('/home',function () {
     return view('home');
