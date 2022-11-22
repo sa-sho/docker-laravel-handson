@@ -27,6 +27,10 @@ Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'show'
     ]]);
+    
+Route::resource('comments', 'App\Http\Controllers\CommentsController', ['only' => [
+    'store'
+    ]]);
 
 Route::get('/home',function () {
     return view('home');
