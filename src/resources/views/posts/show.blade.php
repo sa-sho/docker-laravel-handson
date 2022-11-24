@@ -61,6 +61,11 @@
                             コメントする
                         </button>
                     </div>
+                    <div class="mb-4 text-right">
+                        <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post]) }}">
+                            編集する
+                        </a>
+                    </div>
                 </form>
             </section>
         </div>
