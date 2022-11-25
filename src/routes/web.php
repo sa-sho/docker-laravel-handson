@@ -28,12 +28,16 @@ Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'show'
     ]]);
     
-Route::resource('comments', 'App\Http\Controllers\CommentsController', ['only' => [
-    'store'
-    ]]);
+// Route::resource('comments', 'App\Http\Controllers\CommentsController', ['only' => [
+//     'store'
+//     ]]);
 
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'show', 'edit', 'update'
+    ]]);
+
+Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
+    'create', 'store', 'show', 'edit', 'update', 'destroy'
     ]]);
 
 Route::get('/home',function () {
