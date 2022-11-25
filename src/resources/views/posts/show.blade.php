@@ -12,7 +12,7 @@
             </p>
 
             <section>
-                <!-- <h2 class="h5 mb-4">
+                <h2 class="h5 mb-4">
                     コメント
                 </h2>
 
@@ -60,7 +60,8 @@
                         <button type="submit" class="btn btn-primary">
                             コメントする
                         </button>
-                    </div> -->
+                    </div>
+                </form>
                     <div class="mb-4 text-right">
                         <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post]) }}">
                             編集する
@@ -74,7 +75,6 @@
                             <button type="submit" value="delete" class="btn btn-danger">削除する</button>
                         </form>
                     </div>
-                </form>
             </section>
         </div>
     </div>
