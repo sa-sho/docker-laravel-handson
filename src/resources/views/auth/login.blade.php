@@ -1,8 +1,6 @@
 @extends('layout')
 
 @section('content')
-<head>
-    <meta charset='utf-8'>
     <title>ログインフォーム</title>
 </head>
 <body>
@@ -17,6 +15,5 @@
 </dl>
 <button type='submit' name='action' value='send'>ログイン</button>
 </form>
-</body>
 
 @endsection
