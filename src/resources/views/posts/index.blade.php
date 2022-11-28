@@ -1,6 +1,16 @@
 @extends('layout')
 
 @section('content')
+<body>
+    <p>こんにちは！
+@if (Auth::check())
+    {{ \Auth::user()->name }}さん</p>
+    <p><a href="/logout">ログアウト</a></p>
+@else
+    ゲストさん</p>
+    <p><a href="/login">ログイン</a><br><a href="/register">会員登録</a></p>
+@endif
+</body>
     <div class="container mt-4">
         <div class="mb-4">
             <a href="{{ route('posts.create') }}" class="btn btn-primary">
