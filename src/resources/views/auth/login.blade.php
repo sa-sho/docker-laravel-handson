@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layout')
+
+@section('content')
 <head>
     <meta charset='utf-8'>
     <title>ログインフォーム</title>
@@ -17,4 +18,5 @@
 <button type='submit' name='action' value='send'>ログイン</button>
 </form>
 </body>
-</html>
+
+@endsection
