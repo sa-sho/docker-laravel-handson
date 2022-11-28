@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
     public function index()
     {
         $posts = Post::with(['comments'])->orderBy('created_at', 'desc')->paginate(10);
+        $posts = \Auth::user()->posts()->orderBy('created_at', 'desc')->get();
 
         return view('posts.index', ['posts' => $posts]);
     }
@@ -27,7 +29,11 @@ class PostsController extends Controller
             'body' => 'required|max:2000',
         ]);
 
-        Post::create($params);
+        $post = new Post();
+        $post->user_id = \Auth::id();
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
 
         return redirect()->route('top');
     }
