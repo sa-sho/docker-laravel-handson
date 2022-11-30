@@ -33,7 +33,7 @@
                 <div class="card-footer">
                     <span class="mr-2">
                         投稿日時 {{ $post->created_at->format('Y.m.d') }}
-                        {{ Auth::user()->name }}
+                        {{ $post->user->name }}
                     </span>
 
                     @if ($post->comments->count())
@@ -44,6 +44,8 @@
                 </div>
             </div>
         @endforeach
-
+        <div class="d-flex justify-content-center mb-5">
+    {{ $posts->links() }}
+</div>
     </div>
 @endsection

@@ -11,8 +11,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::with(['comments'])->orderBy('created_at', 'desc')->paginate(10);
-        $posts = \Auth::user()->posts()->orderBy('created_at', 'desc')->get();
+        $posts = Post::with(['comments','user'])->orderBy('created_at', 'desc')->paginate(10);
 
         return view('posts.index', ['posts' => $posts]);
     }

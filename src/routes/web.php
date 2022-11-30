@@ -35,9 +35,11 @@ Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'show', 'edit', 'update'
     ]]);
 
+Route::middleware('auth')->group(function(){
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
-    'create', 'store', 'show', 'edit', 'update', 'destroy'
+    'create', 'store', 'edit', 'update', 'destroy'
     ]]);
+});
 
 Route::get('/home',function () {
     return view('home');
