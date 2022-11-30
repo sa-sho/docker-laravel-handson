@@ -21,6 +21,7 @@
                         <time class="text-secondary">
                             {{ $comment->created_at->format('Y.m.d H:i') }}
                         </time>
+                        {{ $comment->user->name }}
                         <p class="mt-2">
                             {!! nl2br(e($comment->body)) !!}
                         </p>
