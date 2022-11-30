@@ -26,16 +26,16 @@ Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'show'
     ]]);
-    
+
+Route::middleware('auth')->group(function(){
 Route::resource('comments', 'App\Http\Controllers\CommentsController', ['only' => [
     'store'
     ]]);
 
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
-    'create', 'store', 'show', 'edit', 'update'
+    'create', 'store', 'edit', 'update'
     ]]);
 
-Route::middleware('auth')->group(function(){
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'edit', 'update', 'destroy'
     ]]);
