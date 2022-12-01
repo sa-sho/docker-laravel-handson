@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+<div class="d-flex justify-content-center mt-5">
     <title>ユーザー登録フォーム</title>
 </head>
 <body>
@@ -26,6 +27,7 @@
         <dd><input type="password" name="password_confirmation" size="30">
             <span>{{ $errors->first('password_confirmation') }}</span></dd>
     </dl>
-    <button type='submit' name='action' value='send'>送信</button>
+    <button class="btn btn-info" type='submit' name='action' value='send'>送信</button>
 </form>
+</div>
 @endsection
