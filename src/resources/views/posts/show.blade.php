@@ -63,6 +63,7 @@
                         </button>
                     </div>
                 </form>
+                @can('update', $post)
                     <div class="mb-4 text-right">
                         <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post]) }}">
                             編集する
@@ -76,6 +77,7 @@
                             <button type="submit" value="delete" class="btn btn-danger">削除する</button>
                         </form>
                     </div>
+                @endcan
             </section>
         </div>
     </div>
