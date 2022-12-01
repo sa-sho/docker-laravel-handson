@@ -27,7 +27,9 @@
         <dd><input type="password" name="password_confirmation" size="30">
             <span>{{ $errors->first('password_confirmation') }}</span></dd>
     </dl>
-    <button class="btn btn-info" type='submit' name='action' value='send'>送信</button>
+    <div class="d-flex justify-content-end">
+    <button class="btn btn-primary" type='submit' name='action' value='send'>送信</button>
+</div>
 </form>
 </div>
 @endsection
