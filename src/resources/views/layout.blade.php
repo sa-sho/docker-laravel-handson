@@ -17,6 +17,14 @@
             <a class="navbar-brand" href="{{ url('') }}">
                 Laravel BBS
             </a>
+            <div class="mr-1">
+                @if (Auth::check())
+                <a class="btn btn-danger" href="{{ route('logout') }}">ログアウト</a>
+                @else
+                <a class="btn btn-info" href="{{ route('login') }}">ログイン</a>
+                <a class="btn btn-info" href="{{ route('register') }}">会員登録</a>
+                @endif
+            </div>
         </div>
     </header>
 
