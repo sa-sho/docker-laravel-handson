@@ -8,7 +8,7 @@
                 <div class="card-header">ユーザ編集</div>
                 <div class="card-body">
 
-                <form action=""
+                <form action="{{ route('users.postEdit', ['id' => $user->id]) }}"
                   method="post">
                   @csrf
                   <p>ID: {{ $user->id }}</p>

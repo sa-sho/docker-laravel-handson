@@ -64,4 +64,14 @@ class User extends Authenticatable
 
         return $query->first();
     }
+
+    public function updateUserFindById($user)
+    {
+        return $this->where([
+            'id' => $user['id']
+        ])->update([
+            'name' => $user['name'],
+            'email' => $user['email']
+        ]);
+    }
 }
