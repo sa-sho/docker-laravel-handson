@@ -51,4 +51,17 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Comment');
     }
+
+    public function selectUserFindById($id)
+    {
+        $query = $this->select([
+            'id',
+            'name',
+            'email'
+        ])->where([
+            'id' => $id
+        ]);
+
+        return $query->first();
+    }
 }

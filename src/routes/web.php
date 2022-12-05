@@ -39,6 +39,13 @@ Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'edit', 'update', 'destroy'
     ]]);
+
+Route::prefix('users')->group(function() {
+    Route::get('edit/{id}', [App\Http\Controllers\UsersController::class, 'getEdit'])
+    ->name('users.edit');
+    Route::post('edit/{id}', [App\Http\Controllers\UsersController::class, 'postEdit'])
+    ->name('users.postEdit');
+});
 });
 
 Route::get('/home',function () {
