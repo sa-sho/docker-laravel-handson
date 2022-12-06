@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">ユーザ編集</div>
+                <div class="card-header">マイページ</div>
                 <div class="card-body">
 
                 <form action="{{ route('users.postEdit', ['id' => $user->id]) }}"
@@ -17,7 +17,7 @@
                   <input type="text" name="name" value="{{ $user->name }}" />
                   <p>メール</p>
                   <input type="text" name="email" value="{{ $user->email }}" />
-                  <input type="submit" value="更新" />
+                  <input class="btn btn-primary" type="submit" value="更新" />
                 </form>
 
                 </div>
