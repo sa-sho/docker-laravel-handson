@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class UserPolicy
@@ -24,6 +25,6 @@ class UserPolicy
      */
     public function ctrlMyPage(User $user, User $model)
     {
-        return $user->id === $model->id;
+        return $user->id === $model->id ? Response::allow() : Response::deny('You do not own this account.');
     }
 }
