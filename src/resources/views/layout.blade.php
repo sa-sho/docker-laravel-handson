@@ -19,6 +19,7 @@
             </a>
             <div class="mr-1">
                 @if (Auth::check())
+                <a class="btn btn-info" href="{{ route('users.edit', auth()->user()->id) }}">マイページ</a>
                 <a class="btn btn-danger" href="{{ route('logout') }}">ログアウト</a>
                 @else
                 <a class="btn btn-info" href="{{ route('login') }}">ログイン</a>
