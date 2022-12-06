@@ -25,6 +25,7 @@ class UsersController extends Controller
     public function getEdit($id)
     {
         $user = $this->user->selectUserFindById($id);
+        $this->authorize('ctrlMyPage', $user);
         return view('users.edit', compact('user'));
     }
 
