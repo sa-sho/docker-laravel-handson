@@ -18,6 +18,11 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark">
 
+      <a class="navbar-brand" href="{{ route('top') }}"><img src="../img/tsuki1.png" target="blank" alt="logo" height="50"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
         <a class="navbar-brand" href="{{ route('top') }}">NiXE ch</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

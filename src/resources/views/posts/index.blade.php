@@ -19,7 +19,7 @@
                     <p class="card-text">
                     {!! nl2br(e(Str::limit($post->body, 200))) !!}
                     </p>
-                    <a class="card-link text-white" href="{{ route('posts.show', ['post' => $post]) }}">
+                    <a class="card-link text-light" href="{{ route('posts.show', ['post' => $post]) }}">
                     続きを読む
                     </a>
                 </div>
