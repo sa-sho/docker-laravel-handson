@@ -10,24 +10,47 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"
     >
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <header class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('') }}">
-                Laravel BBS
-            </a>
-            <div class="mr-1">
-                @if (Auth::check())
-                <a class="btn btn-info" href="{{ route('users.edit', auth()->user()->id) }}">マイページ</a>
-                <a class="btn btn-danger" href="{{ route('logout') }}">ログアウト</a>
-                @else
-                <a class="btn btn-info" href="{{ route('login') }}">ログイン</a>
-                <a class="btn btn-info" href="{{ route('register') }}">会員登録</a>
-                @endif
-            </div>
+<header>
+  <div class="hero">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="{{ route('top') }}">NiXE ch</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('top') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            @if (Auth::check())
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('users.edit', auth()->user()->id) }}">My page</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('logout') }}">Sign out</a>
+            </li>
+            @else
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('login') }}">Sign in</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('register') }}">Register</a>
+            </li>
+            @endif
+          </ul>
+
         </div>
-    </header>
+      </nav>
+    </div>
+  </div>
+</header>
 
     <div>
         @yield('content')
