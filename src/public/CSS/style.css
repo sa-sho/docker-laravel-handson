@@ -72,3 +72,8 @@ body {
     background-attachment: fixed; 
     background-size: cover;
    }
+
+   img {
+    max-width: 100%;
+    object-fit: cover;
+}

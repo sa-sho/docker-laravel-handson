@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Laravel BBS</title>
+    <title>NiXE ch</title>
 
     <link
         rel="stylesheet"
@@ -14,19 +14,12 @@
 </head>
 <body>
 <header>
-  <div class="hero">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark">
 
-      <a class="navbar-brand" href="{{ route('top') }}"><img src="../img/tsuki1.png" target="blank" alt="logo" height="50"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <a href="{{ route('top') }}"><img src="/img/tsuki1.png" target="blank" alt="logo" height="40"></a>
 
         <a class="navbar-brand" href="{{ route('top') }}">NiXE ch</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">

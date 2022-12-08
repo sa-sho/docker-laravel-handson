@@ -1,12 +1,12 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">マイページ</div>
-                <div class="card-body">
+                <div class="card-header bg-dark text-white border-secondary">マイページ</div>
+                <div class="card-body bg-dark text-white">
 
                 <form action="{{ route('users.postEdit', ['id' => $user->id]) }}"
                   method="post">
@@ -17,7 +17,7 @@
                   <input type="text" name="name" value="{{ $user->name }}" />
                   <p>メール</p>
                   <input type="text" name="email" value="{{ $user->email }}" />
-                  <input class="btn btn-primary" type="submit" value="更新" />
+                  <input class="btn btn-info" type="submit" value="更新" />
                 </form>
 
                 </div>

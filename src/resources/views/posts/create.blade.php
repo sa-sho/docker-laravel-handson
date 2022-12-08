@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
     <div class="container mt-4">
-        <div class="border p-4">
-            <h1 class="h5 mb-4">
+        <div class="border p-4 bg-dark">
+            <h1 class="h5 mb-4 text-white">
                 投稿の新規作成
             </h1>
 
@@ -10,7 +10,7 @@
                 @csrf
 
                 <fieldest class="mt-4">
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <label for="title">
                             タイトル
                         </label>
@@ -28,7 +28,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <label for="bpdy">
                             本文
                         </label>
@@ -51,7 +51,7 @@
                             キャンセル
                         </a>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-info">
                             投稿する
                         </button>
                     </div>
