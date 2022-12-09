@@ -48,6 +48,9 @@ Route::prefix('users')->group(function() {
 });
 });
 
+Route::get('/relaxation', [App\Http\Controllers\RelaxationController::class, 'index'])
+    ->name('relaxation');
+
 Route::get('/home',function () {
     return view('home');
 });

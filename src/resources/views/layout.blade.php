@@ -42,6 +42,9 @@
               <a class="nav-link" href="{{ route('register') }}">Register</a>
             </li>
             @endif
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('relaxation') }}">Relaxation</a>
+            </li>
           </ul>
 
         </div>

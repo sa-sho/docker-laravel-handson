@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-dark text-white border-secondary">マイページ</div>
+                <div class="card-header bg-dark text-white border-secondary">ユーザー情報</div>
                 <div class="card-body bg-dark text-white">
 
                 <form action="{{ route('users.postEdit', ['id' => $user->id]) }}"
