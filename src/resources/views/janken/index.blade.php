@@ -33,7 +33,6 @@
         <img src="img/{{ $computer->getHand() }}.png">
     </div>
  
-      <h2>Result</h2>
       @if ($user->draws($computer))
         <p>あいこ！</p>
       @elseif (($user->wins($computer)))
