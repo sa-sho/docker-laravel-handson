@@ -1,5 +1,5 @@
 //audioを作成
-var audio = new Audio();
+var audio = new Audio("/audio/雨の音.mp3");
 
 //【関数】HTML起動時に事前に呼ばれる
 function loadAudio() {
