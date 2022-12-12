@@ -45,6 +45,9 @@
             <li class="nav-item active">
               <a class="nav-link" href="{{ route('relaxation') }}">Relaxation</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('janken') }}">Janken</a>
+            </li>
           </ul>
 
         </div>

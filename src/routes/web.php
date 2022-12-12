@@ -51,6 +51,10 @@ Route::prefix('users')->group(function() {
 Route::get('/relaxation', [App\Http\Controllers\RelaxationController::class, 'index'])
     ->name('relaxation');
 
+Route::get('/janken', [App\Http\Controllers\JankenController::class, 'index'])
+    ->name('janken');
+Route::post('/janken', [App\Http\Controllers\JankenController::class, 'match']);
+
 Route::get('/home',function () {
     return view('home');
 });
