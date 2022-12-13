@@ -18,34 +18,34 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [App\Http\Controllers\PostsController::class, 'index'])
-->name('top');
+    ->name('top');
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store'
-    ]]);
+]]);
 
 Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
     'create', 'store', 'show'
+]]);
+
+Route::middleware('auth')->group(function () {
+    Route::resource('comments', 'App\Http\Controllers\CommentsController', ['only' => [
+        'store'
     ]]);
 
-Route::middleware('auth')->group(function(){
-Route::resource('comments', 'App\Http\Controllers\CommentsController', ['only' => [
-    'store'
+    Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
+        'create', 'store', 'edit', 'update'
     ]]);
 
-Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
-    'create', 'store', 'edit', 'update'
+    Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
+        'create', 'store', 'edit', 'update', 'destroy'
     ]]);
 
-Route::resource('posts', 'App\Http\Controllers\PostsController', ['only' => [
-    'create', 'store', 'edit', 'update', 'destroy'
-    ]]);
-
-Route::prefix('users')->group(function() {
-    Route::get('edit/{id}', [App\Http\Controllers\UsersController::class, 'getEdit'])
-    ->name('users.edit');
-    Route::post('edit/{id}', [App\Http\Controllers\UsersController::class, 'postEdit'])
-    ->name('users.postEdit');
-});
+    Route::prefix('users')->group(function () {
+        Route::get('edit/{id}', [App\Http\Controllers\UsersController::class, 'getEdit'])
+            ->name('users.edit');
+        Route::post('edit/{id}', [App\Http\Controllers\UsersController::class, 'postEdit'])
+            ->name('users.postEdit');
+    });
 });
 
 Route::get('/relaxation', [App\Http\Controllers\RelaxationController::class, 'index'])
@@ -55,7 +55,10 @@ Route::get('/janken', [App\Http\Controllers\JankenController::class, 'index'])
     ->name('janken');
 Route::post('/janken', [App\Http\Controllers\JankenController::class, 'match']);
 
-Route::get('/home',function () {
+Route::get('/gohan', [App\Http\Controllers\GohanController::class, 'index'])
+    ->name('gohan');
+
+Route::get('/home', function () {
     return view('home');
 });
 

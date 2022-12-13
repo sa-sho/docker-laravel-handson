@@ -29,7 +29,7 @@ class JankenController extends Controller
         // ユーザーの手はフォーム入力から得る
         $user->setHandNumber((int)$request->hand);
 
-         // コンピューターとユーザーのオブジェクトを渡してビューに遷移
+        // コンピューターとユーザーのオブジェクトを渡してビューに遷移
         $vars = [
             'computer' => $computer,
             'user' => $user,

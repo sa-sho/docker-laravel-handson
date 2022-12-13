@@ -48,6 +48,9 @@
             <li class="nav-item active">
               <a class="nav-link" href="{{ route('janken') }}">Janken</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('gohan') }}">Rice</a>
+            </li>
           </ul>
 
         </div>

@@ -39,6 +39,20 @@
         <p>かち！</p>
       @else
         <p>まけ！</p>
+
+      {{-- $result = $user->result($computer);
+      @if($result === player->kekka->aiko)
+      {
+        <p>あいこ！</p>
+      }
+      @elseif($result == player.kekka.win)
+      {
+        <p>かち！</p>
+      }
+      @else //elseif(player.kekka.win) no houga nozomasii
+      {
+        <p>まけ！</p>
+      } --}}
       @endif
     @endif
   </body>

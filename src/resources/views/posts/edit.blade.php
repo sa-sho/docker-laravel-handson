@@ -57,7 +57,7 @@
                             更新する
                         </button>
                     </div>
-                </fieldest>
+                </fieldset>
             </form>
         </div>
     </div>
